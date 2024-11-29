@@ -27,8 +27,8 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userRepository.save(user);
+    public List<User> createUser(@RequestBody List<User> user) {
+        return userRepository.saveAll(user);
     }
 
     @PutMapping("/{id}")
